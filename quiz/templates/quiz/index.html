@@ -24,33 +24,24 @@
         <h1 class="jumbotron-heading">Teresias Quiz-sida</h1>
         <p class="lead text-muted">På denna sida samlar jag alla mina fantastiska quiz!</p>
       </div>
+
     </section>
 
     <div class="album text-muted">
       <div class="container">
 
+
         <div class="row">
+          {% for quiz_slug, quiz in quizzes.items %}
+
           <div class="card">
             <img src="http://placebear.com/356/280" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">{{ quiz.name }}</p>
             <p class="text-xs-center">
           <a href="#" class="btn btn-primary text-xs-center">Till quizet!</a>
         </p>
           </div>
-          <div class="card">
-            <img src="http://placekitten.com/356/280" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="text-xs-center">
-          <a href="#" class="btn btn-primary text-xs-center">Till quizet!</a>
-        </p>
-          </div>
-          <div class="card">
-            <img src="http://placebear.com/356/280" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="text-xs-center">
-          <a href="#" class="btn btn-primary text-xs-center">Till quizet!</a>
-        </p>
-          </div>
+          {% endfor %}
         </div>
 
       </div>
