@@ -11,7 +11,7 @@
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/album.css" rel="stylesheet">
+    <link href="/static/css/album.css" rel="stylesheet">
 
      <!-- My styles -->
     <link href="/static/normalize.css” rel=”stylesheet" >
@@ -33,7 +33,7 @@
       <div class="container">
         <h1 class="jumbotron-heading">{{ quiz.name }}</h1>
         <p class="lead text-muted">{{ quiz.description }}</p>
-        <a href="#" class="btn btn-primary text-xs-center">Till quizet!</a>
+        <a href="{% url 'question_page' quiz_slug 1 %}" class="btn btn-primary text-xs-center">Starta quizet!</a>
       </div>
     </section>
 

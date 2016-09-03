@@ -8,14 +8,14 @@
     <title>Teresias roliga quiz</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="static/css/album.css" rel="stylesheet">
 
      <!-- My styles -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/normalize.css">
+    <link rel="stylesheet" href="static/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +34,7 @@
         <p>{{ answer1 }}</p>
         <p>{{ answer2 }}</p>
         <p>{{ answer3 }}</p>
-        <a href="#" class="btn btn-primary text-xs-center">SVAR</a>
+        <a href="{% url 'result_page' quiz_slug %}" class="btn btn-primary text-xs-center">Färdig</a>
       </div>
     </section>
 
