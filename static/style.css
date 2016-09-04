@@ -1,0 +1,32 @@
+
+
+/*Album*/
+
+
+.jumbotron{
+	background-color: #994585;
+}
+
+
+.jumbotron-heading{
+	font-size: 68px;
+	color:#fff;
+}
+
+.jumbotron, .text-muted {
+	color: #ddd !important;
+}
+
+
+
+/*OWN*/
+.quizcards{
+	text-align: center;
+	padding: 24px;
+}
+
+.quizcards, h2{
+	font-size: 1.5rem;
+	padding: 20px;
+	color: #994585; 
+}
