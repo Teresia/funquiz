@@ -4,32 +4,45 @@
 
 
 .jumbotron{
-	background-color: #994585;
+	background-color: #379184;
+}
+
+.jumbotron-start{
+	background-image: url("/static/spacecat.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
 
 .jumbotron-heading{
 	font-size: 68px;
 	color:#fff;
+	-webkit-text-stroke: 2px #29695F;
 }
 
-.jumbotron, .text-muted {
-	color: #ddd !important;
+.jumbotron .text-muted {
+	color: #fff !important;
+}
+
+.text-muted-start{
+	background-color: black;
+	opacity: 0.8;
+	padding: 8px;
 }
 
 .navbar{
 	    background-color: #eceeef;
     border-bottom: 2px solid #ccc;
-    
+
 }
 
 .navbar-brand{
-	color: #994585;
+	color: #379184;
 	font-weight: 400px;
 }
 
 .navbar-brand:hover {
-	color: #6E3260;
+	color: #29695F;
 }
 
 
@@ -37,11 +50,18 @@
 
 html, body, .container {
 	height: 100%;
-	margin: 0;
 	text-align: center;
 }
 .primecolor{
-background-color: #994585;
+background-color: #379184;
+}
+
+.iframe-border{
+	border: 6px solid #29695F;
+}
+
+.img-circle{
+		border: 6px solid #29695F;
 }
 
 
@@ -53,7 +73,7 @@ background-color: #994585;
 .quizcards, h2{
 	font-size: 1.5rem;
 	padding: 20px;
-	color: #994585; 
+	color: #379184; 
 }
 
 
@@ -61,14 +81,14 @@ background-color: #994585;
 .btn-answer{
 	min-width: 300px;
 	padding: 20px;
-	background-color: #994585;
-	border-color: #994585;
+	background-color: #379184;
+	border-color: #379184;
 	color: #fff;
 	margin-bottom: 12px;
 }
 
 .btn-answer:hover{
-	background-color: #6E3260;
+	background-color: #29695F;
 	color: #fff;
 }
 

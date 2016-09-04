@@ -33,10 +33,10 @@
           </div>
         </div>
       </nav>
-    <div class="jumbotron text-xs-center">
+    <div class="jumbotron jumbotron-start text-xs-center">
       <div class="container">
         <h1 class="jumbotron-heading">Teresias Quiz-sida</h1>
-        <p class="lead text-muted">På denna sida samlar jag alla mina fantastiska quiz!</p>
+        <p class="lead text-muted text-muted-start">På denna sida samlar jag alla mina fantastiska quiz!</p>
       </div>
 
     </div>
@@ -46,7 +46,7 @@
     <div class="row">
       {% for quiz_slug, quiz in quizzes.items %}
         <div class="col-md-4 quizcards">
-          <img class="img-circle" src="http://placebear.com/140/140" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="/static/spacecat_small.jpg" alt="Generic placeholder image" width="240" height="240">
           <h2>{{ quiz.name }}</h2>
           <p><a class="btn btn-secondary" href="{% url 'quiz_page' quiz_slug %}" role="button">Till quizet!</a></p>
         </div><!-- /.col-lg-4 -->
