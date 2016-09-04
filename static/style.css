@@ -1,6 +1,6 @@
 
 
-/*Album*/
+/*Bootstrap override*/
 
 
 .jumbotron{
@@ -17,9 +17,34 @@
 	color: #ddd !important;
 }
 
+.navbar{
+	    background-color: #eceeef;
+    border-bottom: 2px solid #ccc;
+    
+}
+
+.navbar-brand{
+	color: #994585;
+	font-weight: 400px;
+}
+
+.navbar-brand:hover {
+	color: #6E3260;
+}
 
 
 /*OWN*/
+
+html, body, .container {
+	height: 100%;
+	margin: 0;
+	text-align: center;
+}
+.primecolor{
+background-color: #994585;
+}
+
+
 .quizcards{
 	text-align: center;
 	padding: 24px;
@@ -30,3 +55,20 @@
 	padding: 20px;
 	color: #994585; 
 }
+
+
+
+.btn-answer{
+	min-width: 300px;
+	padding: 20px;
+	background-color: #994585;
+	border-color: #994585;
+	color: #fff;
+	margin-bottom: 12px;
+}
+
+.btn-answer:hover{
+	background-color: #6E3260;
+	color: #fff;
+}
+

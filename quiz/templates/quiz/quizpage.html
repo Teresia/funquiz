@@ -10,12 +10,9 @@
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/static/css/album.css" rel="stylesheet">
-
      <!-- My styles -->
-    <link href="/static/normalize.css” rel=”stylesheet" >
-    <link href="/static/style.css” rel=”stylesheet" >
+  <link rel='stylesheet' href='/static/normalize.css'/>
+  <link rel="stylesheet" href="/static/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,17 +22,28 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body class="primecolor">
+          <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'start_page' %}">
+              Teresias Quiz-sida
+            </a>
+
+          </div>
+        </div>
+      </nav>
 
    
 
-    <section class="jumbotron text-xs-center">
+    <div class="jumbotron text-xs-center">
       <div class="container">
+        <img class="img-circle" src="http://placebear.com/340/340" alt="Generic placeholder image" width="340" height="340">
         <h1 class="jumbotron-heading">{{ quiz.name }}</h1>
         <p class="lead text-muted">{{ quiz.description }}</p>
-        <a href="{% url 'question_page' quiz_slug 1 %}" class="btn btn-primary text-xs-center">Starta quizet!</a>
+        <a href="{% url 'question_page' quiz_slug 1 %}" class="btn btn-secondary text-xs-center">Starta quizet!</a>
       </div>
-    </section>
+    </div>
 
 
     <footer class="text-muted">
