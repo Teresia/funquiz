@@ -13,11 +13,17 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+
+from django.contrib import admin
+from django.conf.urls import include
 from django.conf.urls import url
 from quiz import views
 urlpatterns = [
 	url(r"^$", views.startpage, name="start_page"),
-	url(r"^quiz/([a-z-]+)/$", views.quiz, name="quiz_page"),
-    url(r"^quiz/([a-z-]+)/question/([0-9]+)/$", views.question, name="question_page"),
-	url(r"^quiz/([a-z-]+)/completed/$", views.completed, name="result_page"),
+	url(r"^quiz/([0-9]+)/$", views.quiz, name="quiz_page"),
+    url(r"^quiz/([0-9]+)/question/([0-9]+)/$", views.question, name="question_page"),
+    url(r"^quiz/([0-9]+)/question/([0-9]+)/answer/$", views.answer, name="answer_page"),
+	url(r"^quiz/([0-9]+)/completed/$", views.completed, name="result_page"),
+    url(r'^admin/', include(admin.site.urls)),
 ]
+

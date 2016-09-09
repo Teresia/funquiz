@@ -1,4 +1,4 @@
-class Product(object):
+class Product:
 	def __init__(self, price, count, tax):
 		self.price = price 
 		self.count = count
@@ -23,8 +23,6 @@ total_price = 0
 for product in products:
 	total_price+=product.price_with_tax()
 print total_price
-
-
 
 
 

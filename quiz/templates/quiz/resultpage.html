@@ -20,36 +20,52 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-  </head>
+    </head>
 
-  <body class="primecolor">
-  	      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'start_page' %}">
-              Teresias Quiz-sida
-            </a>
+    <body class="primecolor">
+     <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{% url 'start_page' %}">
+            Teresias Quiz-sida
+          </a>
 
-          </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
 
 
-  	<div class="jumbotron text-xs-center">
-  		<div class="container">
-  			<iframe src="//giphy.com/embed/PJKJyaRYWEoiA" width="240" height="320" frameBorder="0" class="giphy-embed iframe-border" allowFullScreen></iframe>
-  			<h1 class="jumbotron-heading">Bra jobbat!<br><small>Du fick {{ correct }} av {{ total }}</small></h1>
-  			<a class="btn btn-secondary" href="{% url 'start_page' %}">Till startsidan</a>
-  		</div>
-  	</div>
+    <div class="jumbotron text-xs-center">
+      <div class="container">
+       <iframe src="//giphy.com/embed/PJKJyaRYWEoiA" width="240" height="320" frameBorder="0" class="giphy-embed iframe-border" allowFullScreen></iframe>
+       <h1 class="jumbotron-heading">Bra jobbat!<br></h1>
+       <p class="lead text-muted">Du fick {{ correct }} av {{ total }} rätt</p>
+
+<!--       {% for question_number, user_answer in saved_answers.items %}
+        {% if question_number == forloop.parentloop.counter|stringformat:"s" %}
+          {% if user_answer == 1 %}
+            <p>Ditt svar: {{ question.answer1 }}</p>
+          {% endif %}
+          {% if user_answer == 2 %}
+            <p>Ditt svar: {{ question.answer2 }}</p>
+          {% endif %}
+          {% if user_answer == 3 %}
+            <p>Ditt svar: {{ question.answer3 }}</p>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+ -->
+       <a class="btn btn-secondary" href="{% url 'start_page' %}">Till startsidan</a>
+     </div>
+   </div>
 
 
-  	<footer class="text-muted">
-  		<div class="container">
+   <footer class="text-muted">
+    <div class="container">
 
-  		</div>
-  	</footer>
+    </div>
+  </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -66,5 +82,5 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-</html>
+  </body>
+  </html>

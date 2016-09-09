@@ -44,11 +44,11 @@
     </div><!-- /.carousel -->
   <div class="container">
     <div class="row">
-      {% for quiz_slug, quiz in quizzes.items %}
+      {% for quiz in quizzes %}
         <div class="col-md-4 quizcards">
           <img class="img-circle" src="/static/spacecat_small.jpg" alt="Generic placeholder image" width="240" height="240">
           <h2>{{ quiz.name }}</h2>
-          <p><a class="btn btn-secondary" href="{% url 'quiz_page' quiz_slug %}" role="button">Till quizet!</a></p>
+          <p><a class="btn btn-secondary" href="{% url 'quiz_page' quiz.quiz_number %}" role="button">Till quizet!</a></p>
         </div><!-- /.col-lg-4 -->
       {% endfor %}
     </div>
