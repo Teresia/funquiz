@@ -66,35 +66,35 @@
         </div>
       </form> -->
       <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
-          {% csrf_token %} 
-          <div class="col-md-12"> 
-      <button class="btn btn-primary btn-answer"
-            name="answer" value="1" >{{ answer1 }}
-          </button>
-          </div>
-          <div class="col-md-12"> 
+        {% csrf_token %} 
+        <div class="col-md-12"> 
           <button class="btn btn-primary btn-answer"
-            name="answer" value="2" >{{ answer2 }}
-          </button>
-          </div>
-          <div class="col-md-12">
-          <button class="btn btn-primary btn-answer"
-            name="answer" value="3" >{{ answer3 }}
-          </button>
-          </div>
-
-           </form> 
-
-
+          name="answer" value="1" >{{ answer1 }}
+        </button>
       </div>
+      <div class="col-md-12"> 
+        <button class="btn btn-primary btn-answer"
+        name="answer" value="2" >{{ answer2 }}
+      </button>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-primary btn-answer"
+      name="answer" value="3" >{{ answer3 }}
+    </button>
+  </div>
+
+</form> 
+
+
+</div>
 
 
 
-      <footer class="text-muted">
-        <div class="container">
+<footer class="text-muted">
+  <div class="container">
 
-        </div>
-      </footer>
+  </div>
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
