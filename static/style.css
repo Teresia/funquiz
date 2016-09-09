@@ -92,3 +92,12 @@ background-color: #379184;
 	color: #fff;
 }
 
+.btn-answer:active{
+	background-color: #29695F;
+	color: #fff;
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+

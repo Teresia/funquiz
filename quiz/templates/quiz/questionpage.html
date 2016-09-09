@@ -13,6 +13,7 @@
   <!-- My styles -->
   <link rel='stylesheet' href='/static/normalize.css'/>
   <link rel="stylesheet" href="/static/style.css">
+  <script src='/static/script.js'></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,19 +41,22 @@
         <h1>Fråga {{ question_number }} <br><br>
          <small>{{ question }}</small></h1>
          <div class="row">
-         <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
+<!--          <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
           {% csrf_token %}
 
           <div class="col-md-12">
+            
+            <label class="btn btn-primary btn-answer"for="v1">{{ answer1 }}
             <input type="radio" name="answer" id="v1" value="1">
-            <label for="v1">{{ answer1 }}</label></div>
+          </label></div>
           <div class="col-md-12">
-            <input type="radio" name="answer" id="v2" value="2">
-            <label for="v2">{{ answer2 }}</label>
+            <label class="btn btn-primary btn-answer" for="v2">{{ answer2 }}
+            <input type="radio" name="answer" id="v2" value="2"></label>
           </div>
           <div class="col-md-12">
+            <label class="btn btn-primary btn-answer"for="v3">{{ answer3 }}
             <input type="radio" name="answer" id="v3" value="3">
-            <label for="v3">{{ answer3 }}</label>
+          </label>
           </div>
         </div>
         <div class="row">
@@ -60,8 +64,28 @@
             <button type="submit">Nästa</button>
           </div>
         </div>
-      </form>
-        
+      </form> -->
+      <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
+          {% csrf_token %} 
+          <div class="col-md-12"> 
+      <button class="btn btn-primary btn-answer"
+            name="answer" value="1" >{{ answer1 }}
+          </button>
+          </div>
+          <div class="col-md-12"> 
+          <button class="btn btn-primary btn-answer"
+            name="answer" value="2" >{{ answer2 }}
+          </button>
+          </div>
+          <div class="col-md-12">
+          <button class="btn btn-primary btn-answer"
+            name="answer" value="3" >{{ answer3 }}
+          </button>
+          </div>
+
+           </form> 
+
+
       </div>
 
 
