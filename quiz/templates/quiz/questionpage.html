@@ -37,53 +37,38 @@
 
 
 
-      <div class="container">
+      <div class="container container_answers">
         <h1>Fråga {{ question_number }} <br><br>
          <small>{{ question }}</small></h1>
-         <div class="row">
-<!--          <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
-          {% csrf_token %}
-
-          <div class="col-md-12">
-            
-            <label class="btn btn-primary btn-answer"for="v1">{{ answer1 }}
-            <input type="radio" name="answer" id="v1" value="1">
-          </label></div>
-          <div class="col-md-12">
-            <label class="btn btn-primary btn-answer" for="v2">{{ answer2 }}
-            <input type="radio" name="answer" id="v2" value="2"></label>
-          </div>
-          <div class="col-md-12">
-            <label class="btn btn-primary btn-answer"for="v3">{{ answer3 }}
-            <input type="radio" name="answer" id="v3" value="3">
-          </label>
-          </div>
+         <div class="question-image">
+          <img src="{{ question_image }}" alt="Generic placeholder image" >
         </div>
         <div class="row">
-            <div class="col-md-12">
-            <button type="submit">Nästa</button>
+
+          <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
+            {% csrf_token %} 
+            <div class="col-md-6"> 
+              <button class="btn btn-answer"
+              name="answer" value="1" >{{ answer1 }}
+            </button>
           </div>
+          <div class="col-md-6"> 
+            <button class="btn btn-answer"
+            name="answer" value="2" >{{ answer2 }}
+          </button>
         </div>
-      </form> -->
-      <form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
-        {% csrf_token %} 
-        <div class="col-md-12"> 
-          <button class="btn btn-primary btn-answer"
-          name="answer" value="1" >{{ answer1 }}
+        <div class="col-md-6">
+          <button class="btn btn-answer"
+          name="answer" value="3" >{{ answer3 }}
         </button>
       </div>
-      <div class="col-md-12"> 
-        <button class="btn btn-primary btn-answer"
-        name="answer" value="2" >{{ answer2 }}
+      <div class="col-md-6"> 
+        <button class="btn btn-answer"
+        name="answer" value="1" >{{ answer4 }}
       </button>
     </div>
-    <div class="col-md-12">
-      <button class="btn btn-primary btn-answer"
-      name="answer" value="3" >{{ answer3 }}
-    </button>
-  </div>
 
-</form> 
+  </form> 
 
 
 </div>
