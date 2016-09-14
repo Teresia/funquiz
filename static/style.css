@@ -89,6 +89,8 @@ background-color: #379184;
   border: 6px solid #29695F;
   overflow: hidden;
   margin-bottom: 12px;
+  border-radius: 5px;
+  background-color: #29695F;
 
 }
 
